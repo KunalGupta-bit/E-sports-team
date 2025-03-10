@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 60px; /* Adjust this value based on the navbar height */
+    background: linear-gradient(45deg, #ff6a00, #ffcc00, #00c6ff, #ff0066); /* Gradient background */
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite; /* Animated gradient */
+    color: white; /* Text color */
+    height: 100vh; /* Full height to cover entire page */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Keyframe for gradient animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow to make navbar pop */
+}
+
+.navbar ul {
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    list-style: none;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px red;
+    animation: gleam 1.5s infinite alternate; /* Gleam effect on navbar links */
+}
+
+/* Gleam effect for navbar links */
+@keyframes gleam {
+    0% {
+        text-shadow: 2px 2px 5px rgb(255, 0, 0), 0 0 25px rgb(8, 255, 173), 0 0 50px rgb(8, 255, 173), 0 0 75px rgb(8, 255, 173);
+    }
+    100% {
+        text-shadow: 2px 2px 5px red, 0 0 25px rgb(255, 0, 255), 0 0 50px rgb(255, 0, 255), 0 0 75px rgb(255, 0, 255);
+    }
+}
+
+/* .color {
+    padding-top: 80px;
+    background: rgba(0, 0, 0, 0.5);
+} */
+
+.navbar ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ff0066; /* Hover color change */
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent table background */
+    border-radius: 10px; /* Rounded corners for table */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow effect on table */
+}
+
+th, td {
+    padding: 20px;
+    font-size: 1.2rem;
+    color: white;
+    text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.8); /* Glowing text effect */
+    border: 1px solid #ff0066; /* Border color */
+}
+
+th {
+    background: #ff0066;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+td {
+    background: rgba(0, 0, 0, 0.8); /* Slightly transparent row backgrounds */
+}
+
+tr:nth-child(even) td {
+    background: rgba(255, 0, 102, 0.5); /* Alternating row colors */
+}
+
+tr:hover td {
+    background: #ff0066; /* Hover effect on rows */
+    transform: scale(1.02); /* Slight zoom on hover */
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for table rows */
+table tr:hover td {
+    background: rgba(255, 0, 102, 0.9);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    transform: scale(1.05);
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 15px rgba(255, 255, 255, 0.8), 0 0 25px #ff00ff, 0 0 50px #ff00ff; /* Glowing text for headings */
+    margin-top: 20px;
+}
+
+/* Text styling for table header */
+th {
+    text-shadow: 1px 1px 5px #ff00ff, 0 0 10px #ff00ff; /* Glowing effect on table headers */
+}

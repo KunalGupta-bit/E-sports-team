@@ -1,0 +1,293 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(45deg, #ff6a00, #ffcc00, #00c6ff, #ff0066); /* Gradient background */
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite; /* Animation for background gradient */
+    color: white; /* Text color */
+    height: 100vh; /* Ensure full viewport height */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow to make navbar pop */
+  }
+
+  .navbar ul {
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    list-style: none;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px red;
+    animation: gleam 1.5s infinite alternate;
+  }
+  
+  @keyframes gleam {
+    0% {
+      text-shadow: 2px 2px 5px rgb(255, 0, 0), 0 0 25px rgb(8, 255, 173),
+        0 0 50px rgb(8, 255, 173), 0 0 75px rgb(8, 255, 173);
+    }
+    100% {
+      text-shadow: 2px 2px 5px red, 0 0 25px rgb(255, 0, 255),
+        0 0 50px rgb(255, 0, 255), 0 0 75px rgb(255, 0, 255);
+    }
+  }
+
+.navbar ul li a {
+  text-decoration: none;
+}
+
+.navbar ul li a:visited {
+  color: aliceblue;
+  text-shadow: 2px 2px 5px red;
+}
+
+.navbar ul li a:hover {
+    color: #ff0066; /* Hover color change */
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.color {
+    position: absolute;
+    /* background: rgba(0, 0, 0, 0.5); Semi-transparent dark overlay for better readability */
+    width: 100%;
+    height: 100%;
+    padding-top: 70px; /* Adds space for navbar */
+    text-align: center;
+  }
+  
+  h1 {
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.7), 0 0 30px #ff00ff, 0 0 50px #ff00ff;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 25px;
+  }
+
+.leader-container {
+  display: flex;
+  justify-content: center; /* Center the images in the row */
+  gap: 70px; /* Adds space between the images */
+  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+  margin-top: 20px;
+}
+
+.leader {
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.leader img {
+  width: 280px;
+  display: block;
+}
+
+.leader p {
+  margin: 10px;
+  font-weight: bold;
+  font-size: 25px;
+  text-shadow: 2px 2px 5px orange;
+  transition: transform 0.3s ease-in-out;
+  animation: shine 1.5s infinite alternate;
+}
+
+@keyframes shine {
+  0% {
+    text-shadow: 2px 2px 5px orange, 0 0 25px rgb(8, 255, 173),
+      0 0 50px rgb(8, 255, 173), 0 0 75px rgb(8, 255, 173);
+  }
+  100% {
+    text-shadow: 2px 2px 5px orange, 0 0 25px rgb(255, 0, 255),
+      0 0 50px rgb(255, 0, 255), 0 0 75px rgb(255, 0, 255);
+  }
+}
+
+.elders-container {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.elders {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.elders img {
+  width: 280px;
+  display: block;
+}
+
+.elders p {
+  margin: 10px;
+  font-weight: bold;
+  font-size: 25px;
+  text-shadow: 2px 2px 5px rgb(251, 255, 0);
+  animation: shine 1.5s infinite alternate;
+}
+
+@keyframes shine {
+  0% {
+    text-shadow: 2px 2px 5px yellow, 0 0 25px rgb(8, 255, 173),
+      0 0 50px rgb(8, 255, 173), 0 0 75px rgb(8, 255, 173);
+  }
+  100% {
+    text-shadow: 2px 2px 5px yellow, 0 0 25px rgb(255, 0, 255),
+      0 0 50px rgb(255, 0, 255), 0 0 75px rgb(255, 0, 255);
+  }
+}
+
+.members-container {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.members {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.members img {
+  width: 280px;
+  display: block;
+}
+
+.members p {
+  margin: 10px;
+  font-weight: bold;
+  font-size: 25px;
+  text-shadow: 2px 2px 5px blue;
+  animation: twi 1.5s infinite alternate;
+}
+
+@keyframes twi {
+  0% {
+    text-shadow: 2px 2px 5px blue, 0 0 25px white, 0 0 50px rgb(8, 255, 173),
+      0 0 75px rgb(8, 255, 173);
+  }
+  100% {
+    text-shadow: 2px 2px 5px blue, 0 0 25px white, 0 0 50px rgb(255, 0, 255),
+      0 0 75px rgb(255, 0, 255);
+  }
+}
+
+.members img,
+.leader img,
+.elders img {
+  width: 280px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.members img:hover,
+.leader img:hover,
+.elders img:hover {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1.1);
+}
+
+.leader-container:hover p:first-of-type {
+  transform: translateY(-10px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.leader-container:hover p:last-of-type {
+  transform: translateY(10px);
+  transition: transform 0.3s ease-in-out;
+}
+.elders-container:hover p:first-of-type {
+  transform: translateY(-10px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.elders-container:hover p:last-of-type {
+  transform: translateY(10px);
+  transition: transform 0.3s ease-in-out;
+}
+.members-container:hover p:first-of-type {
+  transform: translateY(-10px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.members-container:hover p:last-of-type {
+  transform: translateY(10px);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Apply a glowing border with rounded corners */
+.members img,
+.leader img,
+.elders img {
+  width: 280px;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 15px; /* Rounded corners */
+  border: 5px solid transparent; /* Transparent border to hold the space */
+  background-image: linear-gradient(45deg, #ff0066, #ffcc00, #00ff99); /* Gradient border */
+  background-origin: border-box;
+  background-clip: content-box; /* Makes sure the gradient is only on the border */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+/* On hover, apply glowing effect */
+.members img:hover,
+.leader img:hover,
+.elders img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  border: 5px solid transparent;
+  background-image: linear-gradient(45deg, #ff0066, #ffcc00, #00ff99); /* Glowing effect */
+  box-shadow: 0 4px 30px rgba(255, 0, 0, 0.5), 0 4px 30px rgba(0, 255, 0, 0.5), 0 4px 30px rgba(0, 0, 255, 0.5); /* Multi-colored glow */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-image 0.3s ease-in-out;
+}
+
+/* Add glowing effect on image container hover */
+.members-container:hover img,
+.leader-container:hover img,
+.elders-container:hover img {
+  border: 5px solid transparent;
+  background-image: linear-gradient(45deg, #ff0066, #ffcc00, #00ff99);
+  box-shadow: 0 4px 30px rgba(255, 0, 0, 0.5), 0 4px 30px rgba(0, 255, 0, 0.5), 0 4px 30px rgba(0, 0, 255, 0.5);
+}
